@@ -34,7 +34,7 @@ jobs:
         if: env.UPDATE_IPV6 == 'true' && !cancelled()
         env:
           KEY: ${{ secrets.KEY }}
-          DOMAINS: ${{ secrets.DOMAINSV6 }}
+          DOMAINS: ${{ secrets.DOMAINS }}
           SECRETID: ${{ secrets.SECRETID }}
           SECRETKEY: ${{ secrets.SECRETKEY }}
         run: python cf2dns_actions.py AAAA
